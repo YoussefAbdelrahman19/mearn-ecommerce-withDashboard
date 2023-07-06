@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { server } from "../server";
 
 const ActivationPage = () => {
@@ -24,24 +24,36 @@ const ActivationPage = () => {
       };
       sendRequest();
     }
-  }, []);
+  }, [activation_token]);
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      {error ? (
-        <p>Your token is expired!</p>
-      ) : (
-        <p>Your account has been created suceessfully!</p>
-      )}
-    </div>
+    <>
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="h-screen flex flex-col justify-center items-center">
+        {error ? (
+          <p>Your token is expired!</p>
+        ) : (
+          <>
+            <p>Your account has been created successfully!</p>
+            <div>
+              <br />
+              <Link
+                to="/"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Go to Home
+              </Link>
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
