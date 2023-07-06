@@ -1,6 +1,12 @@
 const ErrorHandler = require("../utils/ErrorHandler");
+const winston = require("../utils/logs-config");
 
 module.exports = (err, req, res, next) => {
+  winston.error(
+    `Error: ${err.status || err.code || err.statusCode || 500} ---  message: ${
+      err.message || err.name || "500 Internal Server Error"
+    }`
+  );
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal server Error";
 
