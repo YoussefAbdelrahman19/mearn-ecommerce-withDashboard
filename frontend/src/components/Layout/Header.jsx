@@ -59,8 +59,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/603px-Amazon_logo.svg.png"
                 alt=""
+                class="w-1/3"
               />
             </Link>
           </div>
@@ -111,18 +112,15 @@ const Header = ({ activeHeading }) => {
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-[#3321c8] h-[70px]`}
-      >
+        } transition hidden 800px:flex items-center justify-between w-full bg-[#3321c8] h-[70px]`}>
         <div
-          className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
-        >
+          className={`${styles.section} relative ${styles.noramlFlex} justify-between`}>
           {/* categories */}
           <div onClick={() => setDropDown(!dropDown)}>
             <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
               <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
               <button
-                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
-              >
+                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}>
                 All Categories
               </button>
               <IoIosArrowDown
@@ -147,8 +145,7 @@ const Header = ({ activeHeading }) => {
             <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
-                onClick={() => setOpenWishlist(true)}
-              >
+                onClick={() => setOpenWishlist(true)}>
                 <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
                 <span className="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
                   {wishlist && wishlist.length}
@@ -159,8 +156,7 @@ const Header = ({ activeHeading }) => {
             <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
-                onClick={() => setOpenCart(true)}
-              >
+                onClick={() => setOpenCart(true)}>
                 <AiOutlineShoppingCart
                   size={30}
                   color="rgb(255 255 255 / 83%)"
@@ -205,8 +201,7 @@ const Header = ({ activeHeading }) => {
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
         }
-      w-full h-[60px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}
-      >
+      w-full h-[60px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}>
         <div className="w-full flex items-center justify-between">
           <div>
             <BiMenuAltLeft
@@ -227,8 +222,7 @@ const Header = ({ activeHeading }) => {
           <div>
             <div
               className="relative mr-[20px]"
-              onClick={() => setOpenCart(true)}
-            >
+              onClick={() => setOpenCart(true)}>
               <AiOutlineShoppingCart size={30} />
               <span class="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
                 {cart && cart.length}
@@ -245,15 +239,13 @@ const Header = ({ activeHeading }) => {
         {/* header sidebar */}
         {open && (
           <div
-            className={`fixed w-full bg-[#0000005f] z-20 h-full top-0 left-0`}
-          >
+            className={`fixed w-full bg-[#0000005f] z-20 h-full top-0 left-0`}>
             <div className="fixed w-[70%] bg-[#fff] h-screen top-0 left-0 z-10 overflow-y-scroll">
               <div className="w-full justify-between flex pr-3">
                 <div>
                   <div
                     className="relative mr-[15px]"
-                    onClick={() => setOpenWishlist(true) || setOpen(false)}
-                  >
+                    onClick={() => setOpenWishlist(true) || setOpen(false)}>
                     <AiOutlineHeart size={30} className="mt-5 ml-3" />
                     <span class="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
                       {wishlist && wishlist.length}
@@ -325,14 +317,12 @@ const Header = ({ activeHeading }) => {
                   <>
                     <Link
                       to="/login"
-                      className="text-[18px] pr-[10px] text-[#000000b7]"
-                    >
+                      className="text-[18px] pr-[10px] text-[#000000b7]">
                       Login /
                     </Link>
                     <Link
                       to="/sign-up"
-                      className="text-[18px] text-[#000000b7]"
-                    >
+                      className="text-[18px] text-[#000000b7]">
                       Sign up
                     </Link>
                   </>
